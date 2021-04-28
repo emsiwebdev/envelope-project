@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<title>Envelope</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Maciej Kret">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body class="w3-animate-top">
+
+ <div class="container-sm p-3 my-3 border bg-info rCorners"> <!--Start logo container-->
+  <div class="d-flex justify-content-around firstCont">
+    <div class="flex-fill align-self-center"></div>
+    <div><img class="logo" src="images/logo.gif" alt="logo"></div>
+    <div class="flex-fill align-self-center"></div>
+  </div>
+</div> <!--End logo container-->
+  
+  <div class="container-sm pt-3 my-3 bg-dark text-white rCorners"> <!--Start first content-->
+    <h2 class="display-4">Contact me</h2>
+
+      <div class="row"> <!--Start first div row-->
+
+        <div class="col-sm-12"> <!--Envelope buttons start-->
+          <button type="button" class="btn btn-outline-info but">Open the envelope</button>
+        </div> <!--Envelope buttons end-->
+
+        <div class="col-sm-12 d-flex justify-content-center">
+          <br>
+          <div class="envelope">
+             <svg>
+
+              <line class="svgLine" x1="50" y1="200" x2="50" y2="360" /> <!-- left line -->
+                
+              <line class="svgLine" x1="300" y1="200" x2="300" y2="360" /> <!-- right line -->
+               
+              <line class="svgLine" x1="50" y1="200" x2="300" y2="200" /> <!-- top line -->
+               
+              <line class="svgLine" x1="50" y1="360" x2="300" y2="360" /> <!-- bottom line -->
+
+              <line class="svgLine" x1="50" y1="200" x2="170" y2="280" /> <!-- diagonal line -->
+ 
+              <line class="svgLine" x1="300" y1="200" x2="170" y2="280" /> <!-- diagonal line -->
+                
+                Sorry, your browser does not support inline SVG.
+              </svg>
+          </div>
+        </div>
+
+  </div> <!-- End first div row-->
+
+    <div class="col-sm-12 d-flex justify-content-left alert alert-warning alert-dismissible fade show envSlide"> <!--Start info message-->
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    * - These fields are required.
+    </div> <!--End info message-->
+    <br> 
+    
+    <div class="d-flex justify-content-center formDiv envSlide"> <!--Start form div-->
+
+      <form action="#" class="d-flex flex-column card bg-info text-white p-2 form" name="myForm" method="post"
+       autocomplete="on">
+
+      <div class="p-2"><span class="text-warning">*&nbsp;</span><textarea id="mess"
+         name="message" required maxlength="500" placeholder="Write sth..." autofocus></textarea>
+         <div id="counter" class="p-2 d-flex flex-column justify-content-right">
+           <span id="current" class="align-self-center">0</span>
+           <span id="maximum" class="align-self-center">/ 500</span>
+         </div>
+        </div>
+      
+      <div class="p-2"><label for="fname">First name:<span class="text-warning">*&nbsp;</span></label>
+        <input type="text" id="fname" name="fname" required pattern="^[A-Z][a-z]{3,30}$"></div>
+      
+      <div class="p-2"><label for="lname">Last name:<span class="text-warning">&nbsp;</span></label>
+        <input type="text" id="lname" name="lname"></div>
+      
+      <div class="p-2"><label for="email">E-mail:<span class="text-warning">*&nbsp;</span></label>
+        <input type="email" id="email" name="email" required
+        pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?">
+      </div>
+
+      <div class="p-2">
+        <input class="btn btn-warning" type="submit" value="Send" id="sub">
+      </div>
+
+    </form> 
+
+    </div> <!--End form div-->
+    <br>
+</div> <!-- End first content-->
+
+<!-- The Modal -->
+<div class="modal fade bg-dark" id="myModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content bg-light">
+    
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Notification</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      
+      <!-- Modal body -->
+      <div class="modal-body text-success">
+        <strong>The message has been sent.</strong>
+      </div>
+      
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+  <script src="js/envelope.js"></script>
+  <script type="text/javascript" src="js/formsrc.js"></script>
+</body>
+
+</html>

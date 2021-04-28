@@ -1,0 +1,124 @@
+$main-border: 1px solid black;
+$main-background: red;
+$logo-width: 140px;
+$main-border-radius: 20px;
+
+@keyframes animeLine {
+    0% {width: 0%;}
+	100% {width: 10%;background-color: white; border-bottom-right-radius: 5px;
+         border-top-right-radius: 5px; border: 0; transform: rotateX(180deg);}
+}
+
+@keyframes animeLine2 {
+    0% {width: 10%;background-color: white; border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px; border: 0; transform: rotateX(180deg);}
+	100% {width: 0%;}
+}
+
+@keyframes logo {
+    0% {margin-left: 0px; transform: scaleX(1.10);}
+	100% {margin-left: 0px;}
+}
+
+@keyframes bodyAnime {
+    0% {}
+	100% {}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+    animation-name: bodyAnime;
+    animation-iteration-count: infinite;
+    animation-direction:normal;
+    animation-duration: 2s;
+}
+
+.rCorners {
+    border-radius: $main-border-radius;
+}
+
+.logo {
+    width: $logo-width;
+    height: auto;
+    position: relative;
+    animation-name: logo;
+    animation-duration: 1.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+.firstCont div:nth-child(1) {
+    $main-background: rgb(43, 43, 43);
+    border:$main-border;
+    background-color: $main-background;
+    animation-name: animeLine;
+    animation-duration: 1.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    position: relative;
+    height: 5px;
+}
+
+.firstCont div:nth-child(3) {
+    $main-background: rgb(43, 43, 43);
+    border:$main-border;
+    background-color: $main-background;
+    animation-name: animeLine2;
+    animation-duration: 1.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    position: relative;
+    height: 5px;
+}
+
+.envelope svg {
+    height: 380px;
+    width: 350px;
+}
+
+.svgLine {
+    stroke: white;
+    stroke-width: 3;
+    position: relative;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+}
+
+.form > div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form div:last-child {
+    justify-content: center !important;
+}
+
+.envSlide {
+    display: none !important;
+}
+
+@media only screen and (min-width: 768px) {
+    
+    textarea {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .form {
+        width: 50%;
+
+    }
+
+    .form > div {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
+}
