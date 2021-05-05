@@ -23,7 +23,7 @@ fnameInput.addEventListener('invalid', () => {
   if (fnameInput.value === "") {
     fnameInput.setCustomValidity('Enter your first name :)');
   } else {
-    fnameInput.setCustomValidity('The first name must contain the first capital letter. No numbers or other characters.');
+    fnameInput.setCustomValidity('The first name must contain the first capital letter and has from 3 to 30 characters. No numbers or other characters.');
   }
 });
 
